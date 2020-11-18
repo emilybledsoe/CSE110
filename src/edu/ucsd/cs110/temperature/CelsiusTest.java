@@ -10,7 +10,7 @@ public class CelsiusTest extends TestCase{
         float value = 12.34f;
         Celsius temp = new Celsius(value);
 
-        //assertEquals(value, temp.getValue(), delta);
+        assertEquals(value, temp.getValue(), delta);
     }
 
     public void testCelsiusToString(){
@@ -23,16 +23,16 @@ public class CelsiusTest extends TestCase{
         String ending = " C";
 
         // Verify the suffix of the formatted string
-        //assertTrue(string.startsWith(beginning));
+        assertTrue(string.startsWith(beginning));
 
         // Verify the prefix of the formatted string
-        //assertTrue(string.endsWith(ending));
+        assertTrue(string.endsWith(ending));
 
         // Verify the middle of the formatted string
         int endIndex = string.indexOf(ending);
 
         // (Hint: what is the length of the middle of the string?)
-        //assertTrue(string.substring(0, endIndex).equals(beginning));
+        assertTrue(string.substring(0, endIndex).equals(beginning));
     }
 
     public void testCelsiusToCelsius()
@@ -46,11 +46,11 @@ public class CelsiusTest extends TestCase{
         Celsius temp = new Celsius(0);
 
         Temperature convert = temp.toFahrenheit();
-        //assertEquals(32, convert.getValue(), delta);
+        assertEquals(32, convert.getValue(), delta);
 
         temp = new Celsius(100);
         convert = temp.toFahrenheit();
 
-        //assertEquals(212, convert.getValue(), delta);
+        assertEquals(212, convert.getValue(), delta);
     }
 }
